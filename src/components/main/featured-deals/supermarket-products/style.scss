@@ -1,0 +1,136 @@
+@use "/src/mixin.scss" as *;
+
+.supermarket-products {
+  background: url("/media/images/featured-deals/supermarket-products/background-image.svg") left center no-repeat;
+  background-origin: content-box;
+  @include p-m(0 16px, 12px 0 0);
+
+  .background-layer {
+    background: linear-gradient(226deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+    border-radius: 16px;
+    padding: 16px 20px;
+  }
+
+  .right-col {
+    img.shopping-bag {
+      @include size(40px, 38px);
+    }
+
+    img.supermarket {
+      @include size(190px, 20px);
+      margin: 0 20px;
+    }
+
+    .more {
+      display: none;
+      @include font(1.4rem, 400, --color-neutral-000);
+      background: var(--color-fresh);
+      border-radius: 3em;
+      padding: 0 12px;
+
+      @media (min-width: 1280px) {
+        display: block;
+      }
+    }
+  }
+
+  .left-col {
+    @include space-between;
+    margin-top: 16px;
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      @include size(68px, 69px);
+      background-color: var(--color-neutral-000);
+      position: relative;
+      border-radius: 50%;
+      margin-left: 8px;
+      padding: 8px;
+    }
+
+    li:nth-child(n + 4) {
+      display: none;
+    }
+
+    li img {
+      border-radius: 50%;
+    }
+
+    .discount {
+      @include size(34px, 20px);
+      @include items-center;
+      position: absolute;
+      border-radius: 3em;
+      background-color: var(--color-primary);
+      color: var(--color-neutral-000);
+      font-size: 1.2rem;
+      border-radius: 1em;
+      z-index: 999;
+      bottom: 0;
+      right: 0;
+    }
+
+    .more {
+      svg {
+        @include size(20px, 20px);
+        fill: var(--color-fresh);
+      }
+
+      &.mobile-only {
+        @include items-center;
+        @include size(44px, 44px);
+        border-radius: 50%;
+        background-color: var(--color-neutral-000);
+      }
+
+      &.pc-only {
+        background-color: #fff;
+        color: var(--color-neutral-000);
+        color: var(--color-fresh);
+        border-radius: 3em;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+        gap: 0.3em;
+      }
+    }
+  }
+
+  @include on-pc {
+    .background-layer {
+      @include space-between;
+      align-items: center;
+      padding: 16px 40px;
+    }
+
+    .right-col {
+      img.shopping-bag {
+        @include size(66px, 62px);
+      }
+
+      img.supermarket {
+        @include size(250px, 28px);
+      }
+    }
+
+    .left-col {
+      margin-top: 0;
+
+      li {
+        @include size(74px, 74px);
+      }
+
+      @media (max-width: 1129px) {
+        li:nth-child(1) {
+          display: none;
+        }
+      }
+     
+      li:nth-child(n + 4) {
+        display: block;
+      }
+    }
+  }
+}

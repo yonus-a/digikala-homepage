@@ -1,0 +1,38 @@
+@use "/src/mixin.scss" as *;
+
+.bottom-section {
+  padding-top: 8px;
+
+  .location-cta {
+    @include font(1.1rem, 400, --color-neutral-700);
+    @include size(100%, 30px);
+    padding-bottom: 4px;
+
+    .location-icon {
+      @include size(20px, 20px);
+      fill: var(--color-warning);
+      margin-left: 8px;
+    }
+
+    .chevron-left {
+      margin-right: auto;
+    }
+  }
+
+  @include on-pc {
+    @include space-between;
+    position: relative;
+    padding-top: 0;
+
+    .location-cta {
+      @include hide(".chevron-left");
+      font-size: 1.2rem;
+      height: 40px;
+      width: auto;
+
+      .location-icon {
+        fill: var(--color-icon-high-emphasis);
+      }
+    }
+  }
+}

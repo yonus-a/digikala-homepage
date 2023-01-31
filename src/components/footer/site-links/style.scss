@@ -1,0 +1,53 @@
+@use "/src/mixin.scss" as *;
+
+.site-links {
+  padding-top: 32px;
+
+  p {
+    @include font(1rem, 400, --color-neutral-500);
+    margin-bottom: 32px;
+    padding: 0 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      @include size(33.3333%, 80px);
+      border-right: 1px solid var(--color-neutral-200);
+      border-bottom: 1px solid var(--color-neutral-200);
+      background-color: #f1f2f4;
+
+      &:nth-child(n + 16) {
+        width: 50%;
+      }
+    }
+
+    a {
+      padding: 0 20px;
+      height: 100%;
+
+      img {
+        height: 20px;
+      }
+    }
+  }
+
+  @include on-pc {
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      li {
+        width: 12.7%;
+
+        &:nth-child(n + 8) {
+          width: 11.1%;
+        }
+      }
+    }
+  }
+}

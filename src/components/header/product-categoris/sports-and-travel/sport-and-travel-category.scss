@@ -1,0 +1,7 @@
+@use "/src/mixin.scss" as *;
+
+.sport-and-travel-category {
+  @include on-pc {
+    width: 750px;
+  }
+}

@@ -1,0 +1,60 @@
+@use "/src/mixin.scss" as *;
+
+@media (max-width: 1023px) {
+  .main-nav {
+    height: 100vh;
+    overflow: auto;
+    @include expand-whole;
+    background-color: var(--color-neutral-000);
+    z-index: var(--navbar-dialog-zIndex);
+    padding-bottom: 20px;
+
+    // sheard with product-categories
+    [role="menuitem"] {
+      @include font(1.3rem, 700, --color-neutral-700);
+      margin: 0 20px;
+      height: 52px;
+    }
+
+    .logo {
+      border-bottom: 1px solid var(--color-neutral-100);
+      padding: 20px 0;
+      margin-bottom: 4px;
+      height: auto;
+
+      img {
+        @include size(90px, 24px);
+      }
+    }
+
+    .navbar {
+      flex-direction: column;
+
+      > li > [role="menuitem"] {
+        @include low-emphasis-icons;
+        gap: 12px;
+      }
+
+      // swipe first-child with last-child base direction
+      > li:first-child {
+        order: 1;
+      }
+
+      > li:last-child {
+        order: -1;
+      }
+    }
+
+    h4 {
+      font-size: 1.4rem;
+      margin: 8px 20px 0px;
+      padding: 16px 0 12px;
+      border-top: 1px solid var(--color-neutral-100);
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      width: 312px;
+      box-shadow: 0 1px 1px rgb(0 0 0 / 14%), 0 4px 4px rgb(0 0 0 / 10%);
+    }
+  }
+}

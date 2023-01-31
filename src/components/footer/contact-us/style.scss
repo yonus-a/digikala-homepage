@@ -1,0 +1,38 @@
+@use "/src/mixin.scss" as *;
+
+.contact-us {
+  .wrapper {
+    @include space-between;
+    align-items: center;
+  }
+
+  .skip-to-top {
+    @include low-emphasis-icons;
+    @include font(1.2rem, 400, --color-neutral-400);
+    border: 1px solid var(--color-neutral-200);
+    padding: 6px 16px;
+    border-radius: 8px;
+    gap: 8px;
+  }
+
+  .logo {
+    @include size(113px, 30px);
+  }
+
+  p {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 32px;
+    gap: 4px;
+
+    .seperator {
+      margin: 0 20px;
+    }
+
+    @include on-pc {
+      flex-direction: row;
+      margin: 12px 0 0;
+    }
+  }
+}

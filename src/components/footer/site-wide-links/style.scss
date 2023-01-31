@@ -1,0 +1,46 @@
+@use "/src/mixin.scss" as *;
+
+.site-wide-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+
+  div {
+    width: 50%;
+
+    @media (max-width: 768px) {
+      &:last-child {
+        display: none !important;
+      }
+    }
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  a {
+    font-size: 1.2rem;
+    color: var(--color-neutral-500);
+  }
+
+  @include on-pc {
+    div {
+      width: 33%;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+}
+

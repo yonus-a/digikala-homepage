@@ -1,0 +1,69 @@
+@use "/src/mixin.scss" as *;
+
+.digikala-app {
+  @include p-m(8px 12px, 0 0 28px);
+  @include flex(column);
+  align-items: center;
+  background: #3c4b6d;
+
+  .icon {
+    @include size(24px, 24px);
+    margin-left: 16px;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+    color: white;
+
+    @media (max-width: 1070px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  ul {
+    @include items-center;
+    margin: 24px 0 12px;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    a {
+      img {
+        @include size(142px, 42px);
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .more {
+    background: white;
+    border-radius: 0.3em;
+
+    img {
+      @include size(42px, 44px);
+    }
+  }
+
+  .more-info {
+    font-size: 1.2rem;
+    @include font(1.2rem, 700, --color-neutral-000);
+
+    svg {
+      @include size(18px, 18px);
+      fill: white;
+    }
+  }
+
+  @include on-pc {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 20px;
+
+    .icon {
+      @include size(44px, 44px);
+    }
+
+    ul {
+      margin: 0;
+    }
+  }
+}

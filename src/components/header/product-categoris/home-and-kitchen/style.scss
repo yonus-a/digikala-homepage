@@ -1,0 +1,7 @@
+@use "/src/mixin.scss" as *;
+
+.home-and-kitchen-category {
+  @include on-pc {
+    width: 860px;
+  }
+}

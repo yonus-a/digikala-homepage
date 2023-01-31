@@ -1,0 +1,14 @@
+@use "/src/mixin.scss" as *;
+
+.fasion-category {
+  @include on-pc {
+    width: 790px;
+    > li:nth-child(5) {
+      margin-bottom: 40px;
+    }
+
+    > li:nth-child(16) {
+      margin-bottom: 30px;
+    }
+  }
+}

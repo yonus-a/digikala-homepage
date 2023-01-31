@@ -1,0 +1,13 @@
+@use "/src/mixin.scss" as *;
+
+header {
+  .top-section {
+    padding-bottom: 12px;
+    @include mobile-only;
+
+    > .logo {
+      margin-top: 4px;
+      @include size(92px, 24px);
+    }
+  }
+}

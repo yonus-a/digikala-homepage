@@ -1,0 +1,49 @@
+@use "/src/mixin.scss" as *;
+
+.random-products {
+  .card {
+    background: white;
+    padding: 12px 16px;
+    font-size: 1rem;
+    height: 100%;
+
+    .card-body {
+      @include flex(column);
+
+      .card-discount {
+        @include space-between;
+        align-items: center;
+        margin-top: 5px;
+
+        .card-discount-percent {
+          @include size(34px, 20px);
+          @include font(1.1em, 700, --color-neutral-000);
+          background-color: var(--color-primary);
+          border-radius: 16px;
+          text-align: center;
+        }
+
+        .card-price-now {
+          @include icons-size(16px, 16px);
+          font-size: 1.4em;
+          gap: 4px;
+        }
+      }
+
+      .card-price-old {
+        @include font(1.1em, 400, --color-neutral-300);
+        text-decoration: line-through;
+        padding-left: 20px;
+        text-align: end;
+      }
+    }
+
+    @include on-pc {
+      font-size: 1.1rem;
+
+      .card-discount-percent {
+        line-height: 1.9;
+      }
+    }
+  }
+}

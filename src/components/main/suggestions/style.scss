@@ -1,0 +1,72 @@
+@use "/src/mixin.scss" as *;
+
+.sugesstions {
+  margin: 0 16px 0;
+
+  h2 {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  .swiper-container {
+    position: relative;
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 16px;
+    margin-top: 8px;
+
+    .swiper-control {
+      @include size(40px, 40px);
+      margin: 0 12px;
+    }
+
+    .swiper-next {
+      left: 0;
+    }
+
+    .swiper-slide {
+      width: 160px;
+
+      .row {
+        @include size(inherit, 169px);
+        @include items-center;
+        border-left: 1px solid var(--color-neutral-100);
+        border-top: 1px solid var(--color-neutral-100);
+        padding: 16px 4px;
+
+        a {
+          @include items-center;
+          flex-direction: column;
+          font-size: 1.2rem;
+          gap: 8px;
+
+          .image {
+            @include size(84px, 84px);
+            @include items-center;
+            background: var(--color-neutral-100);
+            border-radius: 50%;
+
+            img {
+              @include size(60px, 60px);
+            }
+          }
+
+          @include on-pc {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      @include on-pc {
+        width: 180px;
+
+        .row {
+          height: 154px;
+        }
+      }
+    }
+  }
+
+  @include on-pc {
+    margin-top: 24px;
+  }
+}

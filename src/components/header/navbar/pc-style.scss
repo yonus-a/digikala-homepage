@@ -1,0 +1,43 @@
+@use "/src/mixin.scss" as *;
+
+@media (min-width: 1024px) {
+  nav.main-nav {
+    display: block !important;
+
+    .navbar {
+      @include items-center;
+      @include hide(".ask-question-icon");
+      @include hide(".seller-icon");
+      display: flex !important;
+
+      > li > [role="menuitem"] {
+        @include icons-size(18px, 18px);
+        @include low-emphasis-icons;
+        font-size: 1.2rem;
+        padding: 0 12px;
+        height: 40px;
+        gap: 4px;
+
+        @media (max-width: 1060px) {
+          padding: 10px;
+        }
+      }
+
+      .v-line {
+        height: 16px;
+      }
+
+      .product-categoris-cta {
+        @include font(1.4rem !important, 700);
+        @include icons-size(20px !important, 20px !important);
+        color: var(--color-neutral-700);
+        padding: 0 0 0 20px !important;
+
+        svg {
+          fill: var(--color-neutral-700) !important;
+          @include size(20px, 20px);
+        }
+      }
+    }
+  }
+}

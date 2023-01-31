@@ -1,0 +1,73 @@
+@use "/src/mixin.scss" as *;
+
+.middle-section {
+  padding: 8px 0;
+  border-block: 1px solid var(--color-neutral-100);
+
+  > .logo {
+    margin-left: 20px;
+  }
+
+  .dialog-container {
+    margin-left: 16px;
+    width: 100%;
+
+    .search-cta {
+      @include size(100%, 44px);
+      @include font(1.1rem, 400, --color-neutral-500);
+      @include low-emphasis-icons;
+      padding: 0 8px;
+      background-color: var(--color-neutral-100);
+      gap: 8px;
+    }
+  }
+
+  .secondary-nav {
+    margin-right: auto;
+
+    .login {
+      @include font(1.2rem, 700);
+      @include p-m(8px 16px, 0 0 0 8px);
+
+      svg {
+        margin-left: 8px;
+      }
+    }
+
+    .shopping-bag {
+      padding: 8px 8px 8px 0;
+    }
+  }
+
+  @include on-pc {
+    padding: 12px 0;
+    border-block: none;
+
+    .dialog-container {
+      position: relative;
+      width: 600px;
+
+      .search-cta {
+        padding: 0 16px;
+        font-size: 1.2rem;
+        gap: 16px;
+      }
+    }
+
+    .secondary-nav {
+      .login {
+        border: 1px solid var(--color-neutral-200);
+        border-radius: var(--medium-radius);
+        @include p-m(6px 15px, 0);
+      }
+
+      .v-line {
+        margin: 0 12px;
+      }
+
+      .shopping-bag {
+        padding: 8px;
+      }
+    }
+  }
+}

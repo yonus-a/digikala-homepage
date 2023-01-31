@@ -1,0 +1,15 @@
+@use "/src/mixin.scss" as *;
+
+.animated-line {
+  display: none;
+  position: absolute;
+  background: var(--color-primary);
+  transition: all 0.3s;
+  z-index: 9999;
+  height: 2px;
+  width: 0;
+
+  @include on-pc {
+    display: block;
+  }
+}

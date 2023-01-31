@@ -1,0 +1,13 @@
+@use "/src/mixin.scss" as *;
+
+.anouncment-bar {
+  @include size(100%, 35px);
+
+  img {
+    object-fit: cover;
+  }
+
+  @include on-pc {
+    height: 60px;
+  }
+}

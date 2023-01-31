@@ -1,0 +1,43 @@
+@use "/src/mixin.scss" as *;
+
+.hero {
+  .hero-swiper {
+    position: relative;
+
+    .swiper-navigation {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      z-index: 9999;
+      gap: 8px;
+
+      .swiper-control {
+        @include size(40px, 40px);
+      }
+    }
+
+    &:hover .swiper-navigation {
+      display: flex;
+    }
+
+    .swiper-slide {
+      height: 300px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      @include size(4px, 4px);
+      background: black;
+    }
+
+    .swiper-pagination-bullet-active {
+      @include size(16px, 6px);
+      border-radius: 0.3em;
+      background: white;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use "/src/mixin.scss" as *;
+
+.arms {
+  padding: 32px 0;
+  border-block: 1px solid var(--color-neutral-100);
+  justify-content: space-between;
+
+  .right-col {
+    h4 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      @include font(1.1rem, 400, --color-neutral-500);
+      line-height: 2.17;
+    }
+
+    .more {
+      @include font(1.2rem, 700, --color-neutral-500);
+      margin-top: 8px;
+
+      svg {
+        @include size(18px, 18px);
+        fill: var(--color-secondary-500);
+      }
+    }
+  }
+
+  .left-col {
+    ul {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+
+      a {
+        margin-right: 8px;
+        border: 1px solid var(--color-neutral-200);
+        border-radius: 8px;
+        padding: 8px;
+
+        img {
+          @include size(75px, 75px);
+          object-fit: scale-down;
+        }
+      }
+    }
+  }
+
+  @include on-pc {
+    display: flex;
+
+    .right-col {
+      width: 60%;
+
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .left-col {
+      ul {
+        a {
+          padding: 16px;
+        }
+      }
+    }
+  }
+}

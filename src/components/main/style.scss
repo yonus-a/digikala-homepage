@@ -1,0 +1,11 @@
+@use "/src/mixin.scss" as *;
+
+main {
+  h2 {
+    font-size: 1.8rem;
+
+    @include on-pc {
+      font-size: 2.1rem;
+    }
+  }
+}

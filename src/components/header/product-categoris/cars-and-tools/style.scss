@@ -1,0 +1,46 @@
+@use "/src/mixin.scss" as *;
+
+.cars-and-tools-category {
+  @include on-pc {
+    width: 800px;
+
+    > li:nth-child(8) {
+      position: relative;
+
+      ul {
+        @include goToNextColumn;
+        top: -400px;
+      }
+    }
+
+    > li:nth-child(9) {
+      margin-top: 241px;
+    }
+
+    > li:nth-child(10) {
+      position: relative;
+
+      ul {
+        > li:nth-child(n + 3) {
+          @include goToNextColumn;
+        }
+
+        > li:nth-child(3) {
+          top: -365px;
+        }
+
+        > li:nth-child(4) {
+          top: -335px;
+        }
+
+        > li:nth-child(5) {
+          top: -305px;
+        }
+      }
+    }
+
+    > li:nth-child(11) {
+      margin-top: 90px;
+    }
+  }
+}

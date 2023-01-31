@@ -1,0 +1,59 @@
+<div
+  role="dialog"
+  class="location-dialog hidden"
+  aria-label="Choose your provinces"
+  aria-modal="true"
+>
+  <div class="dialog-header space-between">
+    <h3>انتخاب شهر</h3>
+    <button class="location-dialog-exit align-center">
+      <include src="icons/close.html"></include>
+    </button>
+  </div>
+  <div class="dialog-body">
+    <button class="find-location-btn align-center">
+      <include src="icons/my-location.html"></include>
+      مکان‌یابی خودکار
+    </button>
+    <ul>
+      <include src="utils/item-generator.html">
+        {
+          "use": "utils/button.html",
+          "items": [
+            {"text": "آذربایجان شرقی"},
+            {"text": "آذربایجان غربی"},
+            {"text": "اردبیل"},
+            {"text": "اصفهان"},
+            {"text": "البرز"},
+            {"text": "ایلام"},
+            {"text": "بوشهر"},
+            {"text": "تهران"},
+            {"text": "چهار محال و بختیاری"},
+            {"text": "خراسان جنوبی"},
+            {"text": "خراسان رضوی"},
+            {"text": "خراسان شمالی"},
+            {"text": "خوزستان"},
+            {"text": "زنجان"},
+            {"text": "سمنان"},
+            {"text": "سیستان و بلوچستان"},
+            {"text": "فارس"},
+            {"text": "قزوین"},
+            {"text": "قم"},
+            {"text": "کردستان"},
+            {"text": "کرمان"},
+            {"text": "کرمانشاه"},
+            {"text": "کهگیلویه و بویراحمد"},
+            {"text": "گلستان"},
+            {"text": "گیلان"},
+            {"text": "لرستان"},
+            {"text": "مازندران"},
+            {"text": "مرکزی"},
+            {"text": "هرمزگان"},
+            {"text": "همدان"},
+            {"text": "یزد"}
+          ]
+        }
+      </include>
+    </ul>
+  </div>
+</div>

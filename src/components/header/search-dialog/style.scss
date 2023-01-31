@@ -1,0 +1,50 @@
+@use "/src/mixin.scss" as *;
+
+.search-dialog {
+  @include expand-whole;
+  background-color: var(--color-neutral-000);
+  z-index: var(--search-dialog-zIndex);
+  // height: 100vh;
+
+  .dialog-header {
+    margin: 4px 16px;
+    border-bottom: 1px solid var(--color-secondary);
+    gap: 16px;
+
+    .search-input {
+      @include size(100%, 44px);
+      font-size: 1.1rem;
+    }
+  }
+
+  .dialog-body {
+    font-size: 1rem;
+
+    h3 {
+      @include low-emphasis-icons;
+      margin: 36px 20px 14px 20px;
+      font-size: 1.3em;
+      gap: 16px;
+    }
+  }
+
+  @include on-pc {
+    border-radius: var(--medium-radius);
+    height: 430px;
+
+    .dialog-header {
+      .search-input {
+        font-size: 1.2rem;
+      }
+    }
+
+    .dialog-body {
+      padding: 17px 16px 24px;
+      font-size: 1.15rem;
+
+      h3 {
+        margin: 12px 0;
+      }
+    }
+  }
+}

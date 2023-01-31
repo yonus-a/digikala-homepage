@@ -1,0 +1,18 @@
+<a
+  href="#"
+  role="menuitem"
+  aria-haspopup="true"
+  aria-expanded="false"
+  class="align-center"
+>
+  <if condition="icon !== ''">
+    <include src="icons/{{icon}}.html">{"class": "prefix-icon"}</include>
+  </if>
+  {{text}}
+  <if condition="ellipsis_onPc !== ''">
+    <span class="ellipsis pc-only">{{ellipsis_onPc}}</span>
+  </if>
+  <include src="icons/chevron-down.html">{"class": "sufix-icon"}</include>
+</a>
+
+

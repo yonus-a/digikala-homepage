@@ -1,0 +1,40 @@
+@use "/src/mixin.scss" as *;
+
+.subscribe {
+  h3 {
+    @include font(1.4rem, 700);
+    margin-bottom: 12px;
+  }
+
+  input {
+    @include size(100%, 48px);
+    font-size: 1.4rem;
+    background-color: var(--color-neutral-100);
+    border-radius: 8px;
+    padding-right: 1em;
+    border: none;
+  }
+
+  button {
+    @include font(1.4rem, 700);
+    background-color: #e0e0e0;
+    color: white;
+    padding: 0 16px;
+    margin-right: 8px;
+    border-radius: 8px;
+  }
+
+  @include on-pc {
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    input {
+      @include size(260px, 48px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    @include hide("h3");
+  }
+}

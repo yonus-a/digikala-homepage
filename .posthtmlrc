@@ -1,0 +1,23 @@
+{
+  "plugins": {
+    "posthtml-include": {
+      "root": "./src/components",
+      "posthtmlExpressionsOptions": {
+        "strictMode": false,
+        "missingLocal": ""
+      }
+    },
+    "posthtml-beautify": {
+      "rules": {
+        "blankLines": false
+      }
+    },
+    "htmlnano": {
+      "removeEmptyAttributes": true
+    },
+    "posthtml-expressions": {
+      "strictMode": false,
+      "missingLocal": ""
+    }
+  }
+}

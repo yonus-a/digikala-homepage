@@ -1,0 +1,12 @@
+import "./components/*/*/*/*.scss";
+import "./components/*/*/*.scss";
+import "./components/*/*.scss";
+import "./components/*/*/*/*.js";
+import "./components/*/*/*.js";
+import "./components/*/*.js";
+import "./js/*.js";
+import "swiper/swiper-bundle.css";
+import "swiper/modules/a11y/a11y.min.css";
+import "swiper/modules/pagination/pagination.min.css";
+import "./css/animated-underline.scss";
+import "./css/swiper.scss";

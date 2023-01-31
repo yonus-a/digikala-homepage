@@ -1,0 +1,51 @@
+@use "/src/mixin.scss" as *;
+
+.features {
+  padding: 0 12px;
+  margin: 24px 0;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 16px;
+  }
+
+  li {
+    @include flex(column);
+    @include items-center;
+  }
+
+  a {
+    @include font(1.1rem, 700);
+    display: grid;
+    place-items: center;
+  }
+
+  picture,
+  img {
+    @include size(52px, 52px);
+    margin-bottom: 4px;
+  }
+
+  .more-icon {
+    @include size(52px, 52px);
+    @include items-center;
+    background: var(--color-neutral-100);
+    border-radius: 50%;
+    margin-bottom: 4px;
+
+    svg {
+      @include size(32px, 32px);
+      fill: var(--color-neutral-400);
+    }
+  }
+
+  @include on-pc {
+    padding: 0 28px;
+    margin: 32px 0;
+
+    ul {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+}

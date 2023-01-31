@@ -1,0 +1,48 @@
+<div class="card">
+  <h3 class="title">{{title}}</h3>
+  <p class="subtitle">{{subtitle}}</p>
+  <ul class="list">
+    <li>
+      <include src='utils/image-link.html'>
+        {
+          "src": "{{src1}}",
+          "fallback": "{{fallback1}}",
+          "alt": "{{alt1}}"
+        }
+      </include>
+    </li>
+    <li>
+      <include src='utils/image-link.html'>
+        {
+          "src": "{{src2}}",
+          "fallback": "{{fallback2}}",
+          "alt": "{{alt2}}"
+        }
+      </include>
+    </li>
+    <li>
+      <include src='utils/image-link.html'>
+        {
+          "src": "{{src3}}",
+          "fallback": "{{fallback3}}",
+          "alt": "{{alt3}}"
+        }
+      </include>
+    </li>
+    <li>
+      <include src='utils/image-link.html'>
+        {
+          "src": "{{src4}}",
+          "fallback": "{{fallback4}}",
+          "alt": "{{alt4}}"
+        }
+      </include>
+    </li>
+  </ul>
+  <div class="more">
+    <a href="" class="align-center">
+      بیشتر
+      <include src='icons/chevron-left.html'></include>
+    </a>
+  </div>
+</div>

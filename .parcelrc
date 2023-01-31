@@ -1,0 +1,10 @@
+{
+  "extends": "@parcel/config-default",
+  "optimizers": {
+    "*.css": ["@parcel/optimizer-cssnano"]
+  },
+  "resolvers": [
+    "@parcel/resolver-glob",
+    "..."
+  ]
+}

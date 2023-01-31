@@ -1,0 +1,38 @@
+<div
+  role="dialog"
+  aria-modal="true"
+  aria-label="search"
+  class="search-dialog hidden"
+>
+  <div class="dialog-header align-center">
+    <button class="search-dialog-exit d-flex mobile-only">
+      <include src="icons/exit.html"></include>
+    </button>
+    <label for="searchbox" class="d-flex pc-only">
+      <include src="icons/search.html"></include>
+    </label>
+    <input
+      type="search"
+      class="search-input border-less-input"
+      placeholder="جستجو"
+      id="searchbox"
+    />
+  </div>
+  <div class="dialog-body">
+    <a href="#" class="dialog-image d-flex pc-only">
+      <include src='utils/webp.html'>
+        {
+          "src": "/media/images/search-banner.webp",
+          "fallback": "/media/images/search-banner.jpg",
+          "alt": "مقرون به صرفه ترین گوشی های سامسونگ",
+          "class": "medium-radius"
+        }
+      </include>
+    </a>
+    <h3 class="align-center">
+      <include src="icons/fire.html"></include>
+      جستجوهای پرطرفدار
+    </h3>
+    <include src="header/trending-searches-swiper/index.html"></include>
+  </div>
+</div>

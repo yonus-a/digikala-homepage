@@ -1,0 +1,12 @@
+<li role="none">
+  <include src="utils/submenu-item.html"> {{category_title}} </include>
+  <ul role="menu" aria-label="{{categoris_title}}">
+    <include src="utils/all-related-products.html"></include>
+    <include src="utils/menuitem-generator.html">
+      { 
+        "use": "utils/menuitem.html",
+        "items": {{categoryـitems}}
+       }
+    </include>
+  </ul>
+</li>

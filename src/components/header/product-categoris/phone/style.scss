@@ -1,0 +1,41 @@
+@use "/src/mixin.scss" as *;
+
+.mobile-category {
+  @include on-pc {
+    width: 648px;
+
+    > li:nth-child(5) {
+      // phone base camera
+      position: relative;
+
+      ul {
+        @include goToNextColumn;
+        top: -403px;
+      }
+    }
+
+    > li:nth-child(6) {
+      // phone base usage
+      margin-top: 155px;
+      position: relative;
+
+      ul {
+        li:nth-child(n + 10) {
+          @include goToNextColumn;
+        }
+
+        li:nth-child(10) {
+          top: -155px;
+        }
+
+        li:nth-child(11) {
+          top: -125px;
+        }
+
+        li:nth-child(12) {
+          top: -95px;
+        }
+      }
+    }
+  }
+}

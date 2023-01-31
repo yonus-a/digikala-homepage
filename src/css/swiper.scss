@@ -1,0 +1,21 @@
+@use "/src/mixin.scss" as *;
+
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+
+  .swiper-control {
+    @include items-center;
+    @include hide-when-disabled;
+    background: var(--color-neutral-000);
+    border: 1px solid var(--color-neutral-300);
+    z-index: var(--swiper-control-zIndex);
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+
+    @include on-pc {
+      display: flex;
+    }
+  }
+}

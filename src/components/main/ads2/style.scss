@@ -1,0 +1,21 @@
+@use "/src/mixin.scss" as *;
+
+.ads2 {
+  padding: 0 20px;
+  margin-top: 30px;
+
+  ul {
+    display: flex;
+    gap: 16px;
+  }
+
+  img {
+    border-radius: 16px;
+  }
+
+  @media (max-width: 830px) {
+    ul {
+      flex-direction: column;
+    }
+  }
+}

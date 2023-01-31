@@ -1,0 +1,23 @@
+@use "/src/mixin.scss" as *;
+
+.ads {
+  margin: 16px 20px 0;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    img {
+      border-radius: 16px;
+    }
+  }
+
+  @include on-pc {
+    margin-top: 24px;
+
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

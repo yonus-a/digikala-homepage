@@ -1,0 +1,23 @@
+<a href="#">
+  <div class="card">
+    <div class="card-image">
+      <include src='utils/webp.html'>
+        {
+          "src": "{{src}}",
+          "fallback": "{{fallback}}",
+          "alt": "{{alt}}"
+        }
+      </include>
+    </div>
+    <div class="card-body">
+      <div class="card-discount">
+        <span class="card-discount-percent"> {{discount}} </span>
+        <div class="card-price-now align-center">
+          <strong>{{price_now}}</strong>
+          <include src="icons/toman.html"></include>
+        </div>
+      </div>
+      <span class="card-price-old">{{price_old}}</span>
+    </div>
+  </div>
+</a>

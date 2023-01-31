@@ -1,0 +1,17 @@
+@use "/src/mixin.scss" as *;
+
+.dialog-layer {
+  @include items-center;
+  z-index: var(--dialog-layer-zIndex);
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+[role="dialog"] {
+  z-index: var(--dialog-zIndex);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 14%), 0 4px 4px rgb(0 0 0 / 10%);
+}

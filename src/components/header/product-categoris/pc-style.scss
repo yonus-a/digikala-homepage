@@ -1,0 +1,106 @@
+@use "/src/mixin.scss" as *;
+
+.product-categoris {
+  @include on-pc {
+    //  level 1
+    $menuitem-width: 200px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 30%);
+    position: absolute;
+    z-index: var(--product-categoris-zIndex);
+    background: var(--color-neutral-000);
+    left: 0;
+    right: 0;
+    top: 100%;
+
+    .goToNextColumnByAbsolute {
+      position: absolute;
+      width: 100%;
+      left: -100%;
+      top: 0;
+    }
+
+    > li {
+      > [role="menuitem"] {
+        @include hide(".chevron-down");
+        @include font(1.2rem, 700);
+        @include icons-size(18px, 18px);
+        @include size($menuitem-width, 40px);
+        padding: 12px 8px;
+        height: 52px;
+        gap: 8px;
+      }
+
+      &:hover > a {
+        background: #f1f2f480;
+        color: var(--color-primary);
+
+        svg {
+          fill: var(--color-primary);
+        }
+      }
+
+      > [role="menu"] {
+        // level 2
+        display: none;
+        @include icons-size(16px, 16px);
+        border-right: 1px solid var(--color-neutral-200);
+        flex-direction: column;
+        padding: 60px 16px 20px;
+        flex-wrap: wrap;
+        position: absolute;
+        right: $menuitem-width;
+        height: 100%;
+        top: 0;
+
+        &.open {
+          display: flex !important;
+        }
+
+        > li {
+          [role="menuitem"] {
+            // shear to any down level
+            padding-top: 4px;
+          }
+
+          > .all-related-products {
+            @include font(1.2rem, 400, --color-neutral-700);
+            position: absolute;
+            top: 20px;
+          }
+
+          > [aria-haspopup] {
+            svg {
+              // transform chevron-down to chevron-left
+              transform: rotate(90deg);
+            }
+          }
+
+          > [aria-haspopup],
+          > .general-menuitem {
+            @include font(1.4rem, 700);
+            margin: 1px 0;
+
+            &::before {
+              content: "";
+              width: 2px;
+              height: 16px;
+              background-color: var(--color-primary);
+              margin-left: 8px;
+            }
+          }
+
+          > [role="menu"] {
+            // level 3
+            @include hide(".all-related-products");
+
+            > li {
+              [role="menuitem"] {
+                @include font(1.2rem, 400, --color-neutral-500);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

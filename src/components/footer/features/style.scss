@@ -1,0 +1,25 @@
+@use "/src/mixin.scss" as *;
+
+.footer-features {
+  display: none;
+  margin: 32px 0;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      @include flex(column);
+      align-items: center;
+      font-size: 1.1rem;
+
+      img {
+        @include size(56px, 56px);
+      }
+    }
+  }
+
+  @include on-pc {
+    display: block;
+  }
+}

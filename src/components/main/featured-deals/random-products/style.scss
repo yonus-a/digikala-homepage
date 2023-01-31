@@ -1,0 +1,79 @@
+@use "/src/mixin.scss" as *;
+
+.random-products {
+  background: var(--color-primary);
+  position: relative;
+  padding: 16px 2px;
+
+  .swiper-container {
+    .swiper-control {
+      @include size(40px, 40px);
+      margin: 0 8px;
+    }
+
+    .swiper-next {
+      left: 0;
+    }
+
+    .swiper-slide {
+      @include size(154px, 228px);
+    }
+
+    .swiper-slide:first-child {
+      @include size(124px, 228px);
+      margin: 0 22px 0 22px !important;
+    }
+
+    .swiper-slide:nth-child(2) {
+      .card {
+        border-radius: 0 8px 8px 0;
+      }
+    }
+
+    .swiper-slide:last-child {
+      @include items-center;
+      background-color: var(--color-neutral-000);
+      border-radius: 8px 0 0 8px;
+
+      a {
+        @include items-center;
+        @include font(1.2rem, 700);
+        flex-direction: column;
+
+        .arrow-left {
+          @include items-center;
+          @include size(46px, 46px);
+          border: 1px solid var(--color-secondary);
+          border-radius: 50%;
+          margin-bottom: 8px;
+
+          svg {
+            @include size(20px, 20px);
+            fill: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+
+  @include on-pc {
+    border-radius: 16px;
+    @include p-m(20px 2px, 16px 16px 0 16px);
+
+    .swiper-container {
+      .swiper-slide {
+        @include size(182px, 246px);
+      }
+
+      .swiper-slide:first-child {
+        @include size(134px, 242px);
+      }
+
+      .swiper-slide:last-child {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "/src/mixin.scss" as *;
+
+.social-links {
+  margin-bottom: 32px;
+  justify-content: space-between;
+  display: flex;
+
+  h3 {
+    @include font(1.4rem, 700);
+    margin-bottom: 12px;
+  }
+
+  ul {
+    display: flex;
+
+    a {
+      display: flex;
+      margin-right: 24px;
+      @include low-emphasis-icons;
+      @include icons-size(32px, 32px);
+    }
+  }
+
+  @include on-pc {
+    display: block;
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    ul {
+      a {
+        margin-right: 0;
+        margin-left: 32px;
+        @include icons-size(40px, 40px);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 32px 0 16px;
+  }
+}

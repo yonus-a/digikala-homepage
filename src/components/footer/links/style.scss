@@ -1,0 +1,9 @@
+@use "/src/mixin.scss" as *;
+
+.footer-links {
+  margin-bottom: 32px;
+
+  @include on-pc {
+    display: flex;
+  }
+}

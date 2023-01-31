@@ -1,0 +1,57 @@
+@use "/src/mixin.scss" as *;
+
+.location-dialog {
+  @include expand-whole;
+  @include flex(column);
+  background: var(--color-neutral-000);
+  font-size: 1rem;
+
+  .dialog-header {
+    border-bottom: 1px solid var(--color-neutral-200);
+    padding: 0 20px;
+
+    h3 {
+      @include font(1.4em, 700);
+      padding: 12px 0;
+    }
+  }
+
+  .dialog-body {
+    padding: 16px 20px;
+    overflow-y: auto;
+
+    button {
+      width: 100%;
+      @include font(1.3em, 700);
+      padding: 12px 0;
+    }
+
+    .find-location-btn {
+      color: var(--color-secondary);
+      gap: 16px;
+
+      svg {
+        fill: var(--color-secondary);
+        margin-bottom: 1px;
+      }
+    }
+
+    ul {
+      button {
+        border-bottom: 1px solid var(--color-neutral-100);
+        color: var(--color-neutral-700);
+      }
+
+      li:last-child button {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @include on-pc {
+    @include size(460px, 730px);
+    border-radius: var(--medium-radius);
+    font-size: 1.15rem;
+    position: static;
+  }
+}

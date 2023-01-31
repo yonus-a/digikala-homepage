@@ -1,0 +1,63 @@
+@use "/src/mixin.scss" as *;
+
+.kid-and-toy-category {
+  @include on-pc {
+    width: 830px;
+
+    > li:nth-child(4) {
+      margin-bottom: 40px;
+    }
+
+    > li:nth-child(8) {
+      position: relative;
+
+      li:nth-child(n + 3) {
+        @include goToNextColumn;
+      }
+
+      li:nth-child(3) {
+        top: -375px;
+      }
+
+      li:nth-child(4) {
+        top: -345px;
+      }
+
+      li:nth-child(5) {
+        top: -315px;
+      }
+
+      li:nth-child(6) {
+        top: -285px;
+      }
+    }
+
+    > li:nth-child(9) {
+      margin-top: 124px;
+    }
+
+    > li:nth-child(10) {
+      position: relative;
+
+      ul {
+        li:nth-child(n + 4) {
+          @include goToNextColumn;
+        }
+
+        li:nth-child(4) {
+          top: -335px;
+        }
+        li:nth-child(5) {
+          top: -305px;
+        }
+        li:nth-child(6) {
+          top: -275px;
+        }
+      }
+    }
+
+    > li:nth-child(11) {
+      margin-top: 95px;
+    }
+  }
+}

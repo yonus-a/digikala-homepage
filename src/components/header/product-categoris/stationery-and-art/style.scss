@@ -1,0 +1,59 @@
+@use "/src/mixin.scss" as *;
+
+.book-and-stationery-category {
+  @include on-pc {
+    width: 630px;
+
+    > li:nth-child(10) {
+      position: relative;
+
+      ul {
+        @include goToNextColumn;
+        top: -394;
+      }
+    }
+
+    > li:nth-child(11) {
+      margin-top: 245px;
+    }
+
+    > li:last-child {
+      position: relative;
+
+      li:nth-child(n + 3) {
+        @include goToNextColumn;
+      }
+
+      li:nth-child(3) {
+        top: -367px;
+      }
+      li:nth-child(4) {
+        top: -337px;
+      }
+      li:nth-child(5) {
+        top: -307px;
+      }
+      li:nth-child(6) {
+        top: -277px;
+      }
+      li:nth-child(7) {
+        top: -247px;
+      }
+      li:nth-child(8) {
+        top: -217px;
+      }
+      li:nth-child(9) {
+        top: -187px;
+      }
+      li:nth-child(10) {
+        top: -157px;
+      }
+      li:nth-child(11) {
+        top: -127px;
+      }
+      li:nth-child(12) {
+        top: -97px;
+      }
+    }
+  }
+}
